@@ -1,1 +1,2 @@
-# Terminal_batch_debugging
+# 监察委终端批量调试工具
+* 可以对终端进行卸载 -> 安装的动作
