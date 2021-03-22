@@ -1,5 +1,9 @@
 @echo off
-rem adb shell dumpsys window | findstr mCurrentFocus
+rem adb shell dumpsys window | findstr mCurrentFocus 查看当前启动的app名字
+
+set /p ip=请输入IP地址及端口：
+echo 等待连接设备...
+adb connect %ip%
 
 goto start
 :start
@@ -21,8 +25,6 @@ goto start
     if %select%==5 goto End
 
 :YH
-	echo 等待连接设备...
-	adb wait-for-device
 	echo 正在卸载Apk中...
 	adb uninstall com.mobile.medical
 	echo 正在安装Apk,请点击允许继续安装
@@ -31,8 +33,6 @@ goto start
 	goto start
 
 :ZHKH
-	echo 等待连接设备...
-	adb wait-for-device
 	echo 正在卸载Apk中...
 	adb uninstall com.mobile.unattended
 	echo 正在安装Apk,请点击允许继续安装
@@ -41,8 +41,6 @@ goto start
 	goto start
 	
 :ZHLZ
-	echo 等待连接设备...
-	adb wait-for-device
 	echo 正在卸载Apk中...
 	adb uninstall com.mobile.khba
 	echo 正在安装Apk,请点击允许继续安装
@@ -51,8 +49,6 @@ goto start
 	goto start
 	
 :HJTX
-	echo 等待连接设备...
-	adb wait-for-device
 	echo 正在卸载Apk中...
 	adb uninstall com.mobile.display
 	echo 正在安装Apk,请点击允许继续安装
