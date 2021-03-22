@@ -1,5 +1,6 @@
 @echo off
 rem adb shell dumpsys window | findstr mCurrentFocus 查看当前启动的app名字
+rem adb tcpip 5555 重新打开5555端口，需要使用数据线将设备和电脑连接
 
 set /p ip=请输入IP地址及端口：
 echo 等待连接设备...
